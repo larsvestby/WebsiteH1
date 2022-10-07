@@ -1,0 +1,31 @@
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px;
+    border-radius: 50%;
+    border-top: 16px;
+    border-right: 16px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+
+    /*Her indstiller vi farven på vores loader. I dette tilfælde med en gradient.05*/
+    background: linear-gradient(#8b0000, rgba(0, 0, 0, 0.5));
+    mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0.25) calc(100% - 10px), #8b0000 0);
+    /* Show only 10px from the border */
+    -webkit-mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0.25) calc(100% - 10px), #8b0000 0);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

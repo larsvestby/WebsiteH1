@@ -1,0 +1,8 @@
+/*Her styler vi vores header*/
+.header {
+  background-color: rgba(0, 0, 0, 0.75);;
+  text-align: center;
+  padding: 20px;
+  transition: 0.2s;
+  padding: 50px 10px;
+}

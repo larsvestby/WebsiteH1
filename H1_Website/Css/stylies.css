@@ -1,0 +1,58 @@
+body,
+html {
+    /*sizing*/
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+
+    /*Baggrundsbillede*/
+    background-image: url(/img/Space.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    /*Tekst*/
+    font-size: 28px;
+    color: whitesmoke;
+    font-family: Arial, sans-serif;
+
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+div.textbox {
+    width: 66.66%;
+    border: 15px solid #8b0000;
+    padding: 50px;
+    margin: auto;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.75);
+    font-size: 20px;
+
+}
+
+div.space {
+    margin: 15px;
+    font-size: 10px;
+    color: #8b0000;
+    height: 5%;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
