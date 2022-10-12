@@ -5,23 +5,28 @@
 <head>
     <!-- Css stylesheet -->
     <link rel="stylesheet" href="../Css/navbar.css">
+    <link rel="stylesheet" href="../Css/cards.css">
     <link rel="stylesheet" href="../Css/stylies.css">
     <link rel="stylesheet" href="../Css/header.css">
     <link rel="stylesheet" href="../Css/footer.css">
     <link rel="stylesheet" href="../Css/loader.css">
     <link rel="stylesheet" href="../Css/scrollbar.css">
     <link rel="stylesheet" href="../Css/text.css">
+    <link rel="stylesheet" href="../Css/pills.css">
+    <link rel="stylesheet" href="../Css/filter.css">
     <!--JavaScript animation -->
     <script src="../JavaScript/animation.js"></script>
     <script src="../JavaScript/spinanim.js"></script>
+    <script src="../JavaScript/filter.js"></script>
     <!-- Font Awesome CSS -->
     <script src="https://kit.fontawesome.com/4eba970eeb.js" crossorigin="anonymous"></script>
 
-    <title>H1 Hjemmeside</title>
+    <title>Projekter</title>
 
 </head>
 
 <body onload="mySpin()" style="margin:0;">
+
 
     <!--Dette er min "loader"-->
     <div id="loader"></div>
@@ -36,25 +41,114 @@
         <nav class="topnav" id="myTopnav">
             <a href="/index.html">Home <i class="fa-solid fa-house"></i></a>
             <a href="/HTML/about.html">About <i class="fa-solid fa-address-card"></i></a>
-            <a class="active" href="/HTML/projects.html">Projects <i class="fa-solid fa-code"></i></i></a>
+            <a class="activenav" href="/HTML/projects.html">Projects <i class="fa-solid fa-code"></i></a>
         </nav>
 
         <div class="space">midlertidigt mellemrum</div>
 
         <div class="textbox">
+            <div class="row">
+                <div class="card-container">
+                    <input type="text" id="myFilter" class="form-control" onkeyup="myFunction()"
+                        placeholder="Søg..."></input>
+                    <!-- Control buttons -->
+                    <div id="myFilter" onclick="activeClass(event)">
+                        <button class="filter-buttons active" onclick="filterSelection('all')"> Show all</button>
+                        <button class="filter-buttons" onclick="filterSelection('csharp')"> C# </button>
+                        <button class="filter-buttons" onclick="filterSelection('css')"> CSS </button>
+                        <button class="filter-buttons" onclick="filterSelection('javascript')"> JavaScript </button>
+                    </div>
+                </div>
+            </div>
 
-            <h2>Content to come</h2>
+            <hr>
 
+            <div id="myItems">
+                <div class="card-container">
+
+                    <!--Række 1-->
+                    <div class="card filterDiv csharp show">
+                        <div class="card-body">
+                            <h5 class="card-title"><a>C#</a></h5>
+                            <img src="/img/c-sharp.png">
+                            <p class="hashtag"><span class="c-pill c-pill--csharp">C#</span></p>
+                            <p>Dette er et C# projekt.</p>
+                            <a href="https://github.com/larsvestby" target="_blank">
+                                <p class="button">Link til projekt</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card filterDiv css show">
+                        <div class="card-body">
+                            <h5 class="card-title"><a>CSS</a></h5>
+                            <img src="/img/css.png">
+                            <p class="hashtag"><span class="c-pill c-pill--css">CSS</span></p>
+                            <p>Dette er et CSS projekt.</p>
+                            <a href="https://github.com/larsvestby" target="_blank">
+                                <p class="button">Link til projekt</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card filterDiv javascript show">
+                        <div class="card-body">
+                            <h5 class="card-title"><a>JavaScript</a></h5>
+                            <img src="/img/javascript-39400.png">
+                            <p class="hashtag"><span class="c-pill c-pill--javascript">JavaScript</span></p>
+                            <p>Dette er et JavaScript projekt.</p>
+                            <a href="https://github.com/larsvestby" target="_blank">
+                                <p class="button">Link til projekt</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--række 2-->
+                    <div class="card filterDiv csharp css show">
+                        <div class="card-body">
+                            <h5 class="card-title"><a>C#</a></h5>
+                            <img src="/img/c-sharp.png">
+                            <p class="hashtag"><span class="c-pill c-pill--csharp">C#</span><span class="c-pill c-pill--css">CSS</span></p>
+                            <p>Dette er et C# projekt.</p>
+                            <a href="https://github.com/larsvestby" target="_blank">
+                                <p class="button">Link til projekt</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card filterDiv css javascript show">
+                        <div class="card-body">
+                            <h5 class="card-title"><a>CSS</a></h5>
+                            <img src="/img/css.png">
+                            <p class="hashtag"><span class="c-pill c-pill--css">CSS</span><span class="c-pill c-pill--javascript">JavaScript</span></p>
+                            <p>Dette er et CSS projekt.</p>
+                            <a href="https://github.com/larsvestby" target="_blank">
+                                <p class="button">Link til projekt</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card filterDiv javascript csharp show">
+                        <div class="card-body">
+                            <h5 class="card-title"><a>JavaScript</a></h5>
+                            <img src="/img/javascript-39400.png">
+                            <p class="hashtag"><span class="c-pill c-pill--javascript">JavaScript</span> <span class="c-pill c-pill--csharp">C#</span></p>
+                            <p>Dette er et JavaScript projekt.</p>
+                            <a href="https://github.com/larsvestby" target="_blank">
+                                <p class="button">Link til projekt</p>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
-
     </div>
 
     <div class="space">midlertidigt mellemrum</div>
-
     <footer class="footer" id="foot">
         <a href="/index.html"><i class="fa-solid fa-house"></i></a>
     </footer>
-    </div>
 </body>
 
 </html>

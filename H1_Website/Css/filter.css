@@ -1,0 +1,36 @@
+.container {
+    overflow: hidden;
+}
+
+.filterDiv {
+    float: left;
+    
+    display: none;
+    /* Hidden by default */
+}
+
+.show {
+    display: block;
+}
+
+/* Style the buttons */
+.filter-buttons {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: grey;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Add a light grey background on mouse-over */
+.filter-buttons:hover {
+    background-color: #ddd;
+}
+
+/* Add a dark background to the active button */
+.filter-buttons.active {
+    background-color: #8b0000;
+    color: white;
+
+}

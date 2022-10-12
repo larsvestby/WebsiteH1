@@ -1,0 +1,59 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    min-width: 33%;
+    width: 33%;
+    margin: 10px;
+    text-align: center;
+    font-family: arial;
+    background: linear-gradient(#8b0000, rgba(0, 0, 0, 0.5));
+    border-radius: 10px;
+}
+
+.hashtag {
+    color: grey;
+    font-size: 22px;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #024504;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: rgb(2.67, 92, 5.33, .5);
+}
+
+.card-container {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.card img {
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 200px;
+    max-height: 200px;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.form-control{
+    border: none;
+    outline: none;
+    padding: 12px 16px ;
+    margin-right: 50px;
+    cursor: text;
+    border-radius: 5px;
+}

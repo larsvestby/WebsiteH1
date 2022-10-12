@@ -31,12 +31,8 @@ nav.topnav {
 }
 
 /*Dette er vores "aktive" side*/
-.topnav a.active {
+.topnav a.activenav {
     background-color: #8b0000;
     color: white;
 }
 
-/*Skal gemme vores "burger" ikon når vi er i en rigtig størrelse*/
-.topnav .icon {
-    display: none;
-}
